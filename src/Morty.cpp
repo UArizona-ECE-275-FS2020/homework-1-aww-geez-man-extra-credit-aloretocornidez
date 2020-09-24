@@ -24,10 +24,10 @@ namespace interdimensional {
             arguments.stop = atoi(argv[2]);
             arguments.step = 1;
 
-            if (strcmp(argv[3], "C137")) {
+            if (strcmp(argv[3], "C137") == 0) {
                 arguments.dim = C137;
             }
-            else if (strcmp(argv[3], "Z286")) {
+            else if (strcmp(argv[3], "Z286") == 0) {
                 arguments.dim = Z286;
             }
             else {
