@@ -9,9 +9,9 @@
 
 #include <string> 
 #include <iostream>
+#include <string>
 
-
-/* Extra credit below:
+//Extra credit below:
 namespace interdimensional { 
 	// Declare enumeration to hold the dimensions each Morty is from
 	enum dimension {UNKNOWN = -1, C137, Z286};
@@ -25,17 +25,20 @@ namespace interdimensional {
 	};
 	
 	// Declare a function to parse the args and return the above declared structure
-	args parseArgs(int c, char** v);
+	args parseArgs(int argc, char** argv);
 	
 }
-*/
 
 // =========================================================================== // 
 //          Declare Namespace C137 and enclosed functions here 
 // =========================================================================== // 
-
-
+namespace C137 {
+	void Morty(interdimensional::args arguments);
+}
 
 // =========================================================================== // 
 //          Declare Namespace Z286 and enclosed functions here 
 // =========================================================================== // 
+namespace Z286 {
+	void Morty(interdimensional::args arguments);
+}
