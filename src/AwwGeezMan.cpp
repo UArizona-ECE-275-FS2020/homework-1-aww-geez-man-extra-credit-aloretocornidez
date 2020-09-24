@@ -38,15 +38,15 @@ int main(int argc, char** argv) {
 	}
 
 	//will only parse the arguments if there if argc == (4 || 5)
-	interdimensional::args arguments = interdimensional::parseArgs(argc, argv);
+	interdimensional::args a = interdimensional::parseArgs(argc, argv);
 
 	//If Dimension is C137
-	if (arguments.dim == 0) {
-		C137::Morty(arguments);
+	if (a.dim == 0) {
+		C137::Morty(a.start, a.stop, a.step);
 	}
 	//If Dimension is Z286
-	else if (arguments.dim == 1) {
-		Z286::Morty(arguments);
+	else if (a.dim == 1) {
+		Z286::Morty(a.start, a.stop, a.step);
 	}
 	//If Dimension is unknown
 	else {

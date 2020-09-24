@@ -24,10 +24,10 @@ namespace interdimensional {
             arguments.stop = atoi(argv[2]);
             arguments.step = 1;
 
-            if (strcmp(argv[3], "C137") == 0) {
+            if (strcmp(argv[3], "C137")) {
                 arguments.dim = C137;
             }
-            else if (strcmp(argv[3], "Z286") == 0) {
+            else if (strcmp(argv[3], "Z286")) {
                 arguments.dim = Z286;
             }
             else {
@@ -54,16 +54,26 @@ namespace interdimensional {
     }
 }
 
+/*enum dimension { UNKNOWN = -1, C137, Z286 };
+
+// Declare a structure to hold the arguments passed to the function
+struct args {
+    int start;
+    int stop;
+    int step;
+    dimension dim;
+};*/
+
 // =========================================================================== // 
 //          Define functions enclosed in Namespace C137 here 
 // =========================================================================== // 
 namespace C137{
-    void Morty(interdimensional::args arguments) {
+    void Morty(int start, int stop, int step) {
         int i;
 
         std::cout << "Morty C137 says:" << std::endl;
 
-        for (i = arguments.start; i <= arguments.stop; i += arguments.step) {
+        for (i = start; i <= stop; i += step) {
             std::cout << i << ": ";
             if (i % 15 == 0) {
                 std::cout << "Aww Geez Man";
@@ -84,12 +94,12 @@ namespace C137{
 //          Define functions enclosed in Namespace Z286 here 
 // =========================================================================== // 
 namespace Z286 {
-    void Morty(interdimensional::args arguments) {
+    void Morty(int start, int stop, int step) {
         int i;
 
         std::cout << "Morty Z286 says:\n";
 
-        for (i = arguments.start; i <= arguments.stop; i += arguments.step) {
+        for (i = start; i <= stop; i += step) {
             std::cout << i << ": ";
             if (i % 15 == 0) {
                 std::cout << "naM zeeG wwA";
