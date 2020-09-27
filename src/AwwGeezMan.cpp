@@ -40,6 +40,10 @@ int main(int argc, char** argv) {
 	//will only parse the arguments if there if argc == (4 || 5)
 	interdimensional::args a = interdimensional::parseArgs(argc, argv);
 
+	//Debug statement to check correctly parsed arguments
+	/*std::cout << "Printing parsed arguments from main: \nStart: " << a.start << "\nStop: " << a.stop << "\nStep: " << a.step
+		<< "\nDimension: " << a.dim << std::endl;*/
+
 	//If Dimension is C137
 	if (a.dim == 0) {
 		C137::Morty(a.start, a.stop, a.step);
@@ -50,7 +54,12 @@ int main(int argc, char** argv) {
 	}
 	//If Dimension is unknown
 	else {
-		std::cout << "ERROR: Unknown dimension!!" << std::endl;
+		if (argc == 4) {
+			std::cout << "ERROR: Unknown dimension!!" << std::endl;
+		}
+		else if (argc == 5) {
+			std::cout << "ERROR: Unknown Dimension!!" << std::endl;
+		}
 	}
 	return 0;
 }
