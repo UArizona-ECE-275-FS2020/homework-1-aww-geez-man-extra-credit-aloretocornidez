@@ -24,10 +24,10 @@ namespace interdimensional {
             arguments.stop = atoi(argv[2]);
             arguments.step = 1;
 
-            if (strcmp(argv[3], "C137")) {
+            if (strcmp(argv[3], "C137") == 0) {
                 arguments.dim = C137;
             }
-            else if (strcmp(argv[3], "Z286")) {
+            else if (strcmp(argv[3], "Z286") == 0) {
                 arguments.dim = Z286;
             }
             else {
@@ -53,16 +53,6 @@ namespace interdimensional {
         return arguments;
     }
 }
-
-/*enum dimension { UNKNOWN = -1, C137, Z286 };
-
-// Declare a structure to hold the arguments passed to the function
-struct args {
-    int start;
-    int stop;
-    int step;
-    dimension dim;
-};*/
 
 // =========================================================================== // 
 //          Define functions enclosed in Namespace C137 here 
