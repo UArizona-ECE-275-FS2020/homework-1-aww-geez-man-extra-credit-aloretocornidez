@@ -11,6 +11,7 @@
 #include "Morty.hpp"
 #include <fstream>
 #include <iostream>
+#include <string.h>
 
 // =========================================================================== // 
 //          Define functions enclosed in Namespace interdimensional here 
