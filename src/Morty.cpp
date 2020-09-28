@@ -59,6 +59,9 @@ namespace interdimensional {
 //          Define functions enclosed in Namespace C137 here 
 // =========================================================================== // 
 namespace C137{
+    void Morty(int start, int stop) {
+        Morty(start, stop, 1);
+    }
     void Morty(int start, int stop, int step) {
         int i;
 
@@ -85,6 +88,9 @@ namespace C137{
 //          Define functions enclosed in Namespace Z286 here 
 // =========================================================================== // 
 namespace Z286 {
+    void Morty(int start, int stop) {
+        Morty(start, stop, 1);
+    }
     void Morty(int start, int stop, int step) {
         int i;
 
